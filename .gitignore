@@ -1,0 +1,16 @@
+### Ignore everything by default
+*
+
+### Allow Git to track version control directories
+!.gitignore
+
+### Allow only the custom plugin folder
+!wp-content/
+wp-content/*
+!wp-content/plugins/
+wp-content/plugins/*
+!wp-content/plugins/notes/
+
+### Ignore everything inside the plugin folder except specific files (optional)
+wp-content/plugins/notes/*
+!wp-content/plugins/notes/**
