@@ -2,7 +2,7 @@
 /**
 * Plugin Name: Notes
 * Description: Plugin for managing personal notes. Work via shortcode [notes].
-* Version:     1.0.0
+* Version:     1.1.0
 * Author:      Volodymyr Kovalov
 * Text Domain: notes
 */
@@ -21,12 +21,7 @@ if (!empty($files)) {
 }
 
 // ACTIVATION HOOKS
-register_activation_hook(__FILE__, function() {
-    do_action('create_notes_db_table'); // CREATE NOTES DATABASE TABLE
-    load_plugin_textdomain('notes', false, dirname(plugin_basename(__FILE__)) . '/languages/'); // LOAD DOMAIN FOR TRANSLATIONS
-});
+register_activation_hook(__FILE__, 'create_notes_db_table');
 
 // UNINSTALL HOOKS
-register_uninstall_hook(__FILE__, function () {
-    do_action('remove_notes_db_table');
-});
+register_uninstall_hook(__FILE__, 'remove_notes_db_table');

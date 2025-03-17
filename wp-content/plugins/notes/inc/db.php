@@ -1,6 +1,6 @@
 <?php
 /**
-* DATABASE ACTIONS
+* DATABASE FUNCTIONS
 */
 
 if (!defined('ABSPATH')) {
@@ -8,7 +8,7 @@ if (!defined('ABSPATH')) {
 }
 
 // CREATE NOTES DB TABLE
-add_action('create_notes_db_table', function() {
+function create_notes_db_table() {
     global $wpdb;
     $table_name = $wpdb->prefix . "notes";
     $charset_collate = $wpdb->get_charset_collate();
@@ -24,17 +24,17 @@ add_action('create_notes_db_table', function() {
 
     require_once ABSPATH . 'wp-admin/includes/upgrade.php';
     dbDelta($sql);
-});
+}
 
 // REMOVE NOTES DB TABLE
-add_action('remove_notes_db_table', function() {
+function remove_notes_db_table() {
     global $wpdb;
     $table_name = $wpdb->prefix . 'notes';      // GET DATABASE TABLE
     $sql = "DROP TABLE IF EXISTS $table_name";  // PREPARE SQL QUERY
 
     require_once ABSPATH . 'wp-admin/includes/upgrade.php';
     dbDelta($sql);
-});
+};
 
 // CREATE NOTE
 function create_note($user_id, $title, $content) {

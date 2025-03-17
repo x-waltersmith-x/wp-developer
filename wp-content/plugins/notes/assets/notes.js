@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('notes-form');
+    const form = document.querySelector('.notes-form');
     if (!form) return;
   
     form.addEventListener('submit', function (e) {

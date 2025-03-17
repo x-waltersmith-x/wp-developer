@@ -15,9 +15,9 @@ function notes_form_shortcode()
     ob_start();
 ?>
 
-    <form id="notes-form" class="form" method="post">
+    <form class="form notes-form" method="post">
         <input type="hidden" name="user" value="<?php echo esc_attr($user_id); ?>" />
-        <input type="hidden" name="action" value="add" />
+        <input type="hidden" name="action" value="create" />
         <input type="hidden" name="note" value="123" />
         <div class="form-input__wrapper">
             <label for="notes_title"><?php _e("Title", "notes"); ?></label>
@@ -43,4 +43,4 @@ function notes_form_shortcode()
 <?php
     return ob_get_clean();
 }
-add_shortcode('notes-form', 'notes_form_shortcode');
+add_shortcode('notes', 'notes_form_shortcode');

@@ -1,0 +1,37 @@
+.notes-form,
+.notes-form .form-input__wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.notes-form {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background: #fff;
+    padding: 20px;
+    gap: 12px;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+.notes-form .form-input__wrapper {
+    gap: 6px;
+}
+
+.notes-form input {
+    border: 1px solid rgba(0,0,0,.65);
+    border-radius: 12px;
+}
+
+.notes-form input,
+.notes-form label {
+    padding: 4px 12px;
+}
+
+.notes-form button[type="submit"] {
+    padding: 6px 12px;
+    text-transform: uppercase;
+    background: blue;
+    color: white;
+    border: unset;
+    border-radius: 50px;
+}
