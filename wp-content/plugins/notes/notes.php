@@ -22,7 +22,8 @@ if (!empty($files)) {
 
 // ACTIVATION HOOKS
 register_activation_hook(__FILE__, function() {
-    do_action('create_notes_db_table');
+    do_action('create_notes_db_table'); // CREATE NOTES DATABASE TABLE
+    load_plugin_textdomain('notes', false, dirname(plugin_basename(__FILE__)) . '/languages/'); // LOAD DOMAIN FOR TRANSLATIONS
 });
 
 // UNINSTALL HOOKS
