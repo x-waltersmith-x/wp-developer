@@ -8,7 +8,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-function notes_form_shortcode()
+function quick_notes_form_shortcode()
 {
     $user_id = get_current_user_id();
 
@@ -43,4 +43,4 @@ function notes_form_shortcode()
 <?php
     return ob_get_clean();
 }
-add_shortcode('notes', 'notes_form_shortcode');
+add_shortcode('quick_notes', 'quick_notes_form_shortcode');

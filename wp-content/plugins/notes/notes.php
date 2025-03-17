@@ -1,7 +1,7 @@
 <?php
 /**
 * Plugin Name: Notes
-* Description: Plugin for managing personal notes. Work via shortcode [notes].
+* Description: Plugin for managing personal notes. Work via shortcode [quick_notes].
 * Version:     1.1.0
 * Author:      Volodymyr Kovalov
 * Text Domain: notes
